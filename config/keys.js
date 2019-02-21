@@ -1,3 +1,3 @@
 module.exports = {
-  mongoURI: 'Your mLab MongoDB Database URI'
+  mongoURI: 'mongodb://alex:alex123@ds139775.mlab.com:39775/shoppinglist00'
 };
