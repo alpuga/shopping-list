@@ -1,6 +1,6 @@
 # Simple Shopping List (MERN Stack)
 
-![ezgif com-gif-maker 1](https://user-images.githubusercontent.com/37851662/53275550-77569480-36c9-11e9-8f9d-208af86f973d.gif)
+<img src="https://user-images.githubusercontent.com/37851662/53275550-77569480-36c9-11e9-8f9d-208af86f973d.gif" alt="alt text" width="500">
 
 Very simple application where you can add and delete items on a list.
 The items are updated in MongoDB from mLab.
