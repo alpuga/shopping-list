@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 import {
   Button,
   Modal,
@@ -8,67 +8,75 @@ import {
   FormGroup,
   Label,
   Input
-} from 'reactstrap';
-import { connect } from 'react-redux';
-import { addItem } from '../actions/itemActions';
+} from "reactstrap";
+import { connect } from "react-redux";
+import { addItem } from "../actions/itemActions";
 
 class ItemModal extends Component {
   state = {
     modal: false,
-    name: ''
-  }
+    name: ""
+  };
 
   toggle = () => {
     this.setState({
       modal: !this.state.modal
     });
-  }
+  };
 
-  onChange = (e) => {
-    this.setState({ [e.target.name]: e.target.value })
-  }
+  onChange = e => {
+    this.setState({ [e.target.name]: e.target.value });
+  };
 
-  onSubmit = (e) => {
+  onSubmit = e => {
     e.preventDefault();
 
     const newItem = {
       name: this.state.name
-    }
+    };
 
     //Add item via addItem action
     this.props.addItem(newItem);
 
     //Close Modal
     this.toggle();
-  }
+  };
 
   render() {
-    return(
+    return (
       <div>
         <Button
-          color='dark'
-          style={{marginBottom: '2rem'}}
+          style={{ marginBottom: "2rem" }}
           onClick={this.toggle}
+          block
+          className="juju button"
         >
           Add Item
         </Button>
-        <Modal
-          isOpen={this.state.modal}
-          toggle={this.toggle}
-        >
-          <ModalHeader toggle={this.toggle}>Add To Shopping List</ModalHeader>
-          <ModalBody>
+        <Modal isOpen={this.state.modal} toggle={this.toggle}>
+          <ModalHeader className="mod jiji" toggle={this.toggle}>
+            Add To Shopping List
+          </ModalHeader>
+          <ModalBody className="mod">
             <Form onSubmit={this.onSubmit}>
               <FormGroup>
-                <Label for='item'>Item</Label>
+                <Label className="jiji" for="item">
+                  Item
+                </Label>
                 <Input
-                  type='text'
-                  name='name'
-                  id='item'
-                  placeholder='Add Shopping Item'
+                  className="ghost-input"
+                  type="text"
+                  name="name"
+                  id="item"
+                  placeholder="Shopping Item"
                   onChange={this.onChange}
                 />
-                <Button color='dark' style={{marginTop: '2rem'}} block>
+                <Button
+                  className="juju button"
+                  color="dark"
+                  style={{ marginTop: "2rem" }}
+                  block
+                >
                   Add
                 </Button>
               </FormGroup>
@@ -82,6 +90,9 @@ class ItemModal extends Component {
 
 const mapStateToProps = state => ({
   item: state.item
-})
+});
 
-export default connect(mapStateToProps, { addItem })(ItemModal);
+export default connect(
+  mapStateToProps,
+  { addItem }
+)(ItemModal);

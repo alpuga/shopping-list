@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 import {
   Collapse,
   Navbar,
@@ -8,39 +8,39 @@ import {
   NavItem,
   NavLink,
   Container
-} from 'reactstrap';
+} from "reactstrap";
 
 class AppNavbar extends Component {
   state = {
     isOpen: false
-  }
+  };
 
   toggle = () => {
     this.setState({
       isOpen: !this.state.isOpen
     });
-  }
+  };
 
   render() {
-    return(
+    return (
       <div>
-        <Navbar color='dark' dark expand='sm' className='mb-5'>
+        <Navbar dark expand="sm" className="mb-5 niv">
           <Container>
-            <NavbarBrand href='/'>Shopping List</NavbarBrand>
+            <NavbarBrand className="niv" href="/">
+              <strong>ShoppingList</strong>
+            </NavbarBrand>
             <NavbarToggler onClick={this.toggle} />
             <Collapse isOpen={this.state.isOpen} navbar>
-              <Nav className='ml-auto' navbar>
+              <Nav className="ml-auto" navbar>
                 <NavItem>
-                  <NavLink href='https://github.com/alpuga'>
-                    Github
-                  </NavLink>
+                  <NavLink href="https://github.com/alpuga">Github</NavLink>
                 </NavItem>
               </Nav>
             </Collapse>
           </Container>
         </Navbar>
       </div>
-    )
+    );
   }
 }
 

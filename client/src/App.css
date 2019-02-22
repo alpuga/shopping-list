@@ -1,8 +1,8 @@
 .remove-btn {
-  margin-right: 0.5rem;
+  font-size: 10px;
 }
 
-.fade-enter{
+.fade-enter {
   opacity: 0.01;
 }
 
@@ -13,10 +13,69 @@
 
 .fade-exit {
   opacity: 1;
-
 }
 
 .fade-exit-active {
   opacity: 0.01;
   transition: opacity 1000ms ease-in;
+}
+
+.juju {
+  background-color: #ddaa66;
+  color: #176845;
+}
+
+.button:hover {
+  background-color: #ca862d;
+  color: #176845;
+}
+
+.color {
+  background-color: #ddaa66;
+}
+
+body,
+.mod,
+.nive {
+  background-color: #7fffd4;
+  font-family: "Quicksand", sans-serif;
+}
+
+.jiji {
+  color: #176845;
+}
+
+.niv {
+  background-color: #25a870;
+  color: #176845;
+}
+
+.niv:hover {
+  color: #0c3825;
+}
+
+.jack {
+  background-color: #7fffd4;
+  color: #176845;
+}
+
+.ghost-input {
+  display: block;
+  width: 100%;
+  border: 0px;
+  outline: none !important;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  color: #176845;
+  background: #a5ebcd;
+
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.ghost-input:focus {
+  background: #7be2b6;
 }
